@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Search</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+   
+    <div>
+        <ul class="unoreder">
+            <li class="check">
+                <a href="{% url 'about' %}">Advanced Search</a></li>
+            <li class="check">
+                <a href="{% url 'home' %}">Image search</a>
+               </a></li>
+        </ul>
+    </div>
+    <div class="check_center">
+        {% comment %} <img src="C:\Users\Y.KARTHICK REDDY\Downloads\Google_2015_logo.svg.png" > {% endcomment %}
+        <img src="{% static 'dup.jpg' %}" alt="Google_Icon" height="92">
+        
+        </div>
+    <form action="https://www.google.com/search">
+      <input type="text" name="q" class="Rounded">
+      <div class="check_center">
+      <input type="submit" value="Google Search" class="for_button" >
+      <input type="submit" value="I'm Feeling Lucky" class="for_button" name="btnI">
+      </div>
+    </form>
+</body>
+</html>

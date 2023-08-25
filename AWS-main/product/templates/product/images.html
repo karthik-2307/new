@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>Images</title>
+</head>
+<body>
+   <!-- Images -->
+   <div>
+      <ul class="unoreder">
+         <li class="check"><a href="{% url 'index' %}">Google</a></li>
+      </ul>
+    </div>
+   <div class="check_center">
+    {% comment %} <img src="C:\Users\Y.KARTHICK REDDY\Downloads\image.png" alt="Google_Icon" height="92"> {% endcomment %}
+    <img src="{% static 'image.png' %}" alt="Google_Icon" height="92">
+    </div>
+    <form action="https://www.google.com/search">
+      <input type="text" name="q" class="Rounded" >
+      <input type="hidden" name="tbm" value="isch">
+      <div class="check_center">
+      <input type="submit" value="Google Search" class="for_button"  style="text-align:center;">
+      <!-- <input type="submit" value="I'm Feeling Lucky" class="for_button" > -->
+      </div>
+    </form>
+</body>
+</html>
